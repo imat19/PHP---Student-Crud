@@ -9,12 +9,10 @@ $sql = "INSERT INTO student_info (first_name, last_name, tel_no)
 VALUES ('{$last_name}', '{$first_name}', '{$tel_no}');";
 
 if ($conn->query($sql)) {
-  header('location:\php_activity\activity5\index.php');
   echo "Added Student";
 }else{
   echo "Failed";
 }
 $conn->close();
-
-
+header('location:\php_activity\activity5\index.php');
 ?>

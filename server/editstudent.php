@@ -11,10 +11,11 @@ $sql = "UPDATE student_info SET
        first_name ='{$first_name}',
        tel_no ='{$tel_no}' WHERE id = '{$id_student}' ;";
 if ($conn->query($sql)) {
-  header('location:\php_activity\activity5\index.php');
+
   echo "Student has been Updated";
 }else{
   echo "Failed";
 }
 $conn->close();
+header('location:\php_activity\activity5\index.php');
 ?>
